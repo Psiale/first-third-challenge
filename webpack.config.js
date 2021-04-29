@@ -13,6 +13,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
+    open: true,
     port: 9000,
   },
   devtool: 'inline-source-map',
@@ -25,7 +26,7 @@ module.exports = {
     // new Dotenv(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HTMLWebpackPlugin({
-      title: 'Weather App',
+      title: 'First + Third',
     }),
     new PreloadWebpackPlugin(),
   ],

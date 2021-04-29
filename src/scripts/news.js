@@ -21,5 +21,6 @@ const news = (title, description) => {
   newsContainer.append(newsTitle, newsDescription);
   checkContainer.appendChild(radioButton);
   mainContainer.append(imageContainer, newsContainer, checkContainer);
+  return mainContainer;
 };
 export default news;

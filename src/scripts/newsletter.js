@@ -1,4 +1,5 @@
 import htmlGenerator from './domTools';
+import news from './news'
 
 const newsLetter = () => {
   const mainContainer = htmlGenerator('div', 'news-letter-main-container');

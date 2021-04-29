@@ -14,7 +14,7 @@ const news = (title, description) => {
   const newsDescription = htmlGenerator('p', 'news-description', description);
 
   // checkContainer childs
-  const radioButton = htmlGenerator('input', 'news-checker');
+  const radioButton = htmlGenerator('input', 'news-checker', '', '', 'radio');
 
   // appending
   imageContainer.appendChild(imagePlaceHolder);

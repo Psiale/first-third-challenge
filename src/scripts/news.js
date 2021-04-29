@@ -14,12 +14,16 @@ const news = (title, description) => {
   const newsDescription = htmlGenerator('p', 'news-description', description);
 
   // checkContainer childs
+  const label = htmlGenerator('label');
   const radioButton = htmlGenerator('input', 'news-checker', '', '', 'radio');
+  const customButton = htmlGenerator('span', 'news-custom-checker');
+
 
   // appending
   imageContainer.appendChild(imagePlaceHolder);
   newsContainer.append(newsTitle, newsDescription);
-  checkContainer.appendChild(radioButton);
+  label.append(radioButton, customButton);
+  checkContainer.appendChild(label);
   mainContainer.append(imageContainer, newsContainer, checkContainer);
   return mainContainer;
 };

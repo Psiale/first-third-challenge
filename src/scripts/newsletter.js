@@ -11,9 +11,6 @@ const newsLetter = () => {
 
   // news childs
   for (let i = 0; i < newsData.length; i += 1) {
-    console.log(newsData[i]);
-    console.log('title', newsData[i].title);
-    console.log('description', newsData[i].description);
     newsContainer.append(news(newsData[i].title, newsData[i].description));
   }
 

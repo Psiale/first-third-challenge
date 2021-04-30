@@ -43,6 +43,13 @@ body {
 
             .news-image-container {
               width: auto;
+
+              .image-placeholder {
+                min-height: unset;
+                min-width: unset;
+                width: 105px;
+                height: 75px;
+              }
             }
 
             .news-description-container {
@@ -60,11 +67,11 @@ body {
               }
 
               .news-title {
-                font-size: 27px;
+                font-size: 18px;
               }
 
               .news-description {
-                font-size: 21px;
+                font-size: 12px;
                 letter-spacing: 1px;
               }
             }

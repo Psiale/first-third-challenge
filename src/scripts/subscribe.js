@@ -7,7 +7,12 @@ const subscribe = () => {
   // mainContainer direct Childs
   const input = htmlGenerator('input', 'subscribe-input', '', 'emailValue');
   const button = htmlGenerator('button', 'subscribe-button', 'SUBSCRIBE');
-  mainContainer.addEventListener('submit', toggle);
+  mainContainer.addEventListener('submit', e => {
+    e.preventDefault();
+    setTimeout(() => {
+      toggle();
+    }, 1000);
+  });
   // button.addEventListener('click', () => {
   //   toggle(modalContainer);
   // });

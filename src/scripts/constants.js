@@ -37,9 +37,15 @@ const newsData = [
 
 export const messages = [
   {
-    title: 'Oh no!', subtitle: 'something went wrong, we are so sorry :c',
+    title: 'Oh no!', subtitle: 'something went wrong, we are so sorry :c', error: true,
   }, {
-    title: 'Subscribed!', subtitle: 'Thanks for subscribing to out newsletter',
+    title: 'Subscribed!', subtitle: 'Thanks for subscribing to our newsletter', error: false,
+  },
+  {
+    title: 'Amazing!', subtitle: 'Will keep you updated with the best articles.', error: false,
+  },
+  {
+    title: 'ERROR!', subtitle: 'Please try again or contact support', error: true,
   }];
 
 export default newsData;

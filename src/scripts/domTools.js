@@ -10,20 +10,26 @@ const inputGenerator = (type = 'input', htmlClass) => {
   return element;
 };
 
-export const randomMessageGenerator = () => {
-  const random = messages[Math.floor(Math.random() * messages.length)];
-  const result = {
-    title: random.title,
-    subtitle: random.subtitle,
-  };
-
-  return result;
+const errorStyle = (error, element) => {
+  (error)
+    ? element.style.backgroundColor = 'red'
+    : element.style.backgroundColor = '#4292f4';
 };
 
-export const toggle = element => {
-  element.preventDefault();
+
+export const randomMessageGenerator = () => {
+  const modalTitle = document.getElementById('modalTitle');
+  const modalSubTitle = document.getElementById('modalSubTitle');
   const modal = document.getElementById('modal');
-  console.log(modal.classList);
+  const random = messages[Math.floor(Math.random() * messages.length)];
+  errorStyle(random.error, modal);
+  modalTitle.innerHTML = random.title;
+  modalSubTitle.innerHTML = random.subtitle;
+};
+
+export const toggle = () => {
+  randomMessageGenerator();
+  const modal = document.getElementById('modal');
   (modal.classList.contains('flex')) ? modal.classList.remove('flex') : modal.classList.add('flex');
 };
 

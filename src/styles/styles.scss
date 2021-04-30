@@ -96,8 +96,8 @@ body {
                     top: 0;
                     left: 0;
                     border-radius: 100%;
-                    height: 50px;
-                    width: 50px;
+                    height: 35px;
+                    width: 35px;
                     background-color: #eee;
 
                     &::after {
@@ -120,8 +120,8 @@ body {
                     &:checked ~ span::after {
                       display: block;
                       left: 20px;
-                      top: 14px;
-                      width: 8px;
+                      top: 6px;
+                      width: 15px;
                       height: 15px;
                       border: solid #4292f4;
                       border-width: 0 3px 3px 0;

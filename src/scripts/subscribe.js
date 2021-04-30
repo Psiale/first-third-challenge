@@ -1,7 +1,7 @@
 import htmlGenerator from './domTools';
 
 const subscribe = () => {
-  const mainContainer = htmlGenerator('div', 'susbscribe-main-container');
+  const mainContainer = htmlGenerator('form', 'susbscribe-main-container');
   const checkBoxContainer = htmlGenerator('div', 'subscribe-check-container');
 
   // mainContainer direct Childs

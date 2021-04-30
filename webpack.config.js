@@ -8,7 +8,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/scripts/index.js',
+    app: './src/index.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),

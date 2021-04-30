@@ -35,4 +35,11 @@ const newsData = [
   },
 ];
 
+export const messages = [
+  {
+    title: 'Oh no!', subtitle: 'something went wrong, we are so sorry :c',
+  }, {
+    title: 'Subscribed!', subtitle: 'Thanks for subscribing to out newsletter',
+  }];
+
 export default newsData;

@@ -1,13 +1,18 @@
-import htmlGenerator, { toggle } from './domTools';
+import htmlGenerator, { randomMessageGenerator, toggle } from './domTools';
 
-const modal = (title, subtitle) => {
+
+const modal = () => {
+  const modalMessage = randomMessageGenerator();
   const mainContainer = htmlGenerator('div', 'modal-main-container', '', 'modal');
-  const modalTitle = htmlGenerator('h2', 'modal-title', title);
-  const modalSubtitle = htmlGenerator('p', 'modal-subtitle', subtitle);
+  const modalTitle = htmlGenerator('h1', 'modal-title', modalMessage.title);
+  const modalSubtitle = htmlGenerator('p', 'modal-subtitle', modalMessage.subtitle);
 
   const modalButton = htmlGenerator('button', 'modal-button', 'Got it!');
 
-  modalButton.addEventListener('click', () => {
-    toggle(modalButton);
-  });
+  modalButton.addEventListener('click', toggle);
+  mainContainer.append(modalTitle, modalSubtitle, modalButton);
+
+  return mainContainer;
 };
+
+export default modal;

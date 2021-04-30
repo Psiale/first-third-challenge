@@ -1,4 +1,4 @@
-import htmlGenerator from './domTools';
+import htmlGenerator, { toggle } from './domTools';
 
 const subscribe = () => {
   const mainContainer = htmlGenerator('form', 'susbscribe-main-container');
@@ -7,6 +7,10 @@ const subscribe = () => {
   // mainContainer direct Childs
   const input = htmlGenerator('input', 'subscribe-input', '', 'emailValue');
   const button = htmlGenerator('button', 'subscribe-button', 'SUBSCRIBE');
+  mainContainer.addEventListener('submit', toggle);
+  // button.addEventListener('click', () => {
+  //   toggle(modalContainer);
+  // });
 
   // checkBox childs
   const checkBox = htmlGenerator('input', 'subscribe-checkbox', '', '', 'checkbox');

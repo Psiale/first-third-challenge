@@ -1,16 +1,30 @@
 /* eslint-disable no-unused-expressions */
+import { messages } from './constants';
 
 const inputGenerator = (type = 'input', htmlClass) => {
   const element = document.createElement('input');
   element.type = type;
   element.classList.add(htmlClass);
   element.placeholder = 'Enter email';
-  element.required = true;
+  if (element.type === 'text') element.required = true;
   return element;
 };
 
+export const randomMessageGenerator = () => {
+  const random = messages[Math.floor(Math.random() * messages.length)];
+  const result = {
+    title: random.title,
+    subtitle: random.subtitle,
+  };
+
+  return result;
+};
+
 export const toggle = element => {
-  (element.style.display === 'block') ? element.style.display = 'none' : element.style.display = 'block';
+  element.preventDefault();
+  const modal = document.getElementById('modal');
+  console.log(modal.classList);
+  (modal.classList.contains('flex')) ? modal.classList.remove('flex') : modal.classList.add('flex');
 };
 
 const htmlGenerator = (htmlElement, htmlClass, text = null, idClass = null, type = 'input') => {

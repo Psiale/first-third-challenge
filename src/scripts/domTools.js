@@ -16,4 +16,5 @@ const htmlGenerator = (htmlElement, htmlClass, text = null, idClass = null, type
   element.id = idClass;
   return element;
 };
+
 export default htmlGenerator;

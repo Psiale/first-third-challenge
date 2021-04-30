@@ -15,14 +15,14 @@ const news = (title, description) => {
 
   // checkContainer childs
   const label = htmlGenerator('label');
-  const radioButton = htmlGenerator('input', 'news-checker', '', '', 'radio');
-  const customButton = htmlGenerator('span', 'news-custom-checker');
+  const checkBoxButton = htmlGenerator('input', 'news-checker', '', '', 'checkbox');
+  const customButton = htmlGenerator('span', 'news-custom-checker', '', 'customCheck');
 
 
   // appending
   imageContainer.appendChild(imagePlaceHolder);
   newsContainer.append(newsTitle, newsDescription);
-  label.append(radioButton, customButton);
+  label.append(checkBoxButton, customButton);
   checkContainer.appendChild(label);
   mainContainer.append(imageContainer, newsContainer, checkContainer);
   return mainContainer;

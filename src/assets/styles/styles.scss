@@ -119,10 +119,10 @@ body {
 
                     &:checked ~ span::after {
                       display: block;
-                      left: 20px;
-                      top: 6px;
-                      width: 15px;
-                      height: 15px;
+                      left: 13px;
+                      top: 8px;
+                      width: 7px;
+                      height: 12px;
                       border: solid #4292f4;
                       border-width: 0 3px 3px 0;
                       -webkit-transform: rotate(45deg);
